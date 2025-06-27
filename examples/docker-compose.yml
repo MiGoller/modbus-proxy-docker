@@ -1,0 +1,15 @@
+services:
+  proxy:
+    container_name: modbus-proxy
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      args:
+        ARG_PYTHON_VERSION: alpine
+    ports:
+      - 9000:9000/tcp
+      - 5503:5503/tcp
+      - 5504:5504/tcp
+    volumes:
+      - ./modbus-proxy.yml:/config/modbus-proxy.yml:ro
+    restart: unless-stopped
