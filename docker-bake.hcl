@@ -1,6 +1,4 @@
-target "docker-metadata-action" {
-    annotations = [ "org.opencontainers.image.description=Docker image for Jose Tiago Macara Coutinho's modbus-proxy" ]
-}
+target "docker-metadata-action" {}
 
 target "build" {
     inherits = ["docker-metadata-action"]
@@ -13,4 +11,5 @@ target "build" {
         "linux/arm64",
         "linux/386"
     ]
+    annotations = [ "org.opencontainers.image.description=Docker image for Jose Tiago Macara Coutinho's modbus-proxy" ]
 }
