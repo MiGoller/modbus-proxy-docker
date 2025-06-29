@@ -77,6 +77,8 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=sha
+          annotations: |
+            org.opencontainers.image.description="Docker image for Jose Tiago Macara Coutinho's modbus-proxy"
 
       # Login against Docker Hub except on PR
       # https://github.com/docker/login-action
