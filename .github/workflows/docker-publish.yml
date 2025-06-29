@@ -77,6 +77,8 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=sha
+        env:
+          DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
       # Login against Docker Hub except on PR
       # https://github.com/docker/login-action

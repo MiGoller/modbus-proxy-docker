@@ -11,5 +11,4 @@ target "build" {
         "linux/arm64",
         "linux/386"
     ]
-    annotations = [ "manifest:org.opencontainers.image.description=Docker image for Jose Tiago Macara Coutinho's modbus-proxy" ]
 }
